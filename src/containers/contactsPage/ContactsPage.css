@@ -1,0 +1,105 @@
+/* =========================
+   Contacts Page Styles
+   ========================= */
+
+.contacts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.contacts-page h2 {
+  font-size: clamp(1.25rem, 2vw + 0.3rem, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text, #1e538b);
+}
+
+/* Section wrapper */
+.contacts-page section {
+  background: var(--panel, #fff);
+  border: 1px solid var(--border, #ddd);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-1, 0 2px 8px rgba(0, 0, 0, 0.05));
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Form spacing */
+.contacts-page form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contacts-page label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.contacts-page input,
+.contacts-page select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #ccc);
+  background: var(--panel, #fff);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacts-page input:focus,
+.contacts-page select:focus {
+  outline: none;
+  border-color: var(--accent, #007bff);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--accent, #007bff) 40%, transparent);
+}
+
+/* Submit button */
+.contacts-page button[type="submit"] {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background: #248cfc !important;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.contacts-page button[type="submit"]:hover {
+  background: var(--accent-600, #0056c9);
+}
+
+.contacts-page button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Divider */
+.contacts-page hr {
+  border: none;
+  border-top: 1px solid var(--border, #ddd);
+  margin: 1.5rem 0;
+}
+
+/* TileList wrapper */
+.contacts-page .tile-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .contacts-page {
+    padding: 1rem;
+  }
+  .contacts-page section {
+    padding: 1rem;
+  }
+}

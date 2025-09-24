@@ -1,0 +1,58 @@
+/* =========================
+   Appointment Form Styles
+   ========================= */
+
+.appointment-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.appointment-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.appointment-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text, #222);
+}
+
+.appointment-form input,
+.appointment-form select {
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #ccc);
+  background: var(--panel, #fff);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+  outline: none;
+  border-color: var(--accent, #007bff);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--accent, #007bff) 40%, transparent);
+}
+
+.appointment-form input[type="submit"] {
+  justify-self: start;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent, #007bff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.appointment-form input[type="submit"]:hover {
+  background: var(--accent-600, #0056c9);
+}
+
+.appointment-form input[type="submit"]:active {
+  transform: scale(0.98);
+}

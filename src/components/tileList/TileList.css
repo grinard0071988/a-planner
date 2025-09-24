@@ -1,0 +1,43 @@
+/* =========================
+   Tile List Styles
+   ========================= */
+
+.tile-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.tile {
+  background: var(--panel, #fff);
+  border: 1px solid var(--border, #ddd);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-1, 0 2px 8px rgba(0, 0, 0, 0.05));
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2, 0 6px 18px rgba(0, 0, 0, 0.08));
+}
+
+.tile .tile-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text, #222);
+}
+
+.tile .tile-subtitle {
+  font-size: 0.9rem;
+  color: var(--muted, #666);
+}
+
+.tile .tile-detail {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text, #222);
+}
